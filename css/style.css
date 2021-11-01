@@ -1,0 +1,212 @@
+**** estilos.css ****
+
+
+@font-face {
+	font-family:Titulo;
+	src:url(../fontes/ANODETONOONE.TTF);
+}
+
+h1 {
+	font-family:Titulo;
+	font-size:40px;
+	color:#22180a;
+}
+
+
+body {
+	
+	background-image:url(../imgs/fundo.jpg);
+	
+}
+
+
+#container{
+	background-color: white;
+	width:950px;
+	height:auto; /*aumenta o tamanho de acordo com a quantidade de objetos*/
+	position:relative;
+	margin-left:auto; /*margin auto indica que o que tiver dentro do container vai estar centralizado*/
+	margin-right:auto;/*Idem*/
+}
+
+
+#fundoGame {
+	
+	width:950px;
+	height:630px;
+	background-image:url(../imgs/fundo_game.jpg);
+	border-color:#FFF;
+	border-style:solid;
+	background-position: 0;
+	
+}
+
+
+#jogador {
+	width:256px;
+	height:66px;
+	position:absolute;
+	left:8px;
+	top:179px;
+    background-image:url(../imgs/apache.png);
+
+}
+
+#inimigo1 {
+	width: 256px;
+	height: 66px;
+	position: absolute;
+	left: 689px;
+	top: 253px;
+	background-image:url(../imgs/inimigo1.png);
+	
+}
+
+#inimigo2 {
+	width: 165px;
+	height: 70px;
+	position: absolute;
+	left: 775px;
+	top: 447px;
+	background-image: url(../imgs/inimigo2.png);
+}
+
+#amigo {
+	width: 44px;
+	height: 51px;
+	position: absolute;
+	left: 10px;
+	top: 464px;
+	background-image:url(../imgs/amigo.png);
+}
+
+#inicio {
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+ 	margin-left:auto;
+    margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+
+}
+
+#disparo {
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(../imgs/disparo.png);
+}
+
+#explosao1 {
+	width:15px;
+	height:87px;
+	position:absolute;
+
+}
+
+#explosao2 {
+	width:15px;
+	height:87px;
+	position:absolute;
+	
+}
+
+
+
+/*Steps()
+steps(<number_of_steps>, <direction>)
+steps is a timing function that allows us to break an animation or transition into many segments,
+rather than one continuos transition from one state to another.
+
+the first parameter specifies the positive number of steps we want our animation to take.
+
+the second parameter defines the point at which the action declared in our @keyframes will occur. This value
+is optional and will default to "end" if left unspecified.
+*/
+
+.anima1 {
+	background-image:url(../imgs/helicoptero.png);
+	animation:play .5s steps(2) infinite;
+
+	/*Prefixos proprietários de cada browser. */
+	-webkit-animation: play .5s steps(2) infinite; /*google chrome*/
+    -moz-animation: play .5s steps(2) infinite; /*mozilla*/
+    -ms-animation: play .5s steps(2) infinite; /*intenet explorer*/
+    -o-animation: play .5s steps(2) infinite; /*opera*/
+}
+
+@keyframes play {
+	from {background-position:0px;}
+	to {background-position:-512px;}
+}
+
+@-webkit-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-moz-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-ms-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-o-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+
+ .anima2 {
+	background-image:url(../imgs/inimigo1.png);
+	animation:play .5s steps(2) infinite;
+
+	
+	/*Prefixos proprietários de cada browser. */
+	-webkit-animation: play .5s steps(2) infinite; /*google chrome*/
+    -moz-animation: play .5s steps(2) infinite; /*mozilla*/
+    -ms-animation: play .5s steps(2) infinite; /*intenet explorer*/
+    -o-animation: play .5s steps(2) infinite; /*opera*/
+}
+
+.anima3 {
+	background-image:url(../imgs/amigo.png);
+	animation:play2 .9s steps(12) infinite;
+	-webkit-animation: play2 .9s steps(12) infinite;
+       -moz-animation: play2 .9s steps(12) infinite;
+        -ms-animation: play2 .9s steps(12) infinite;
+         -o-animation: play2 .9s steps(12) infinite;
+}
+
+@keyframes play2 {
+	from {background-position:0px;}
+	to {background-position:-528px;}
+}
+
+@-webkit-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-moz-keyframes play2 {
+   from { background-
+	
+	position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-ms-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-o-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
